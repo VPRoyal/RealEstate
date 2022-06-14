@@ -1,0 +1,4 @@
+export const ADD_HCARD="ADD_HCARD"
+export const UPDATE_HCARD="UPDATE_HCARD"
+export const REMOVE_HCARD="REMOVE_HCARD"
+export const CHANGE_MAX_VAL="MAX_VAL"

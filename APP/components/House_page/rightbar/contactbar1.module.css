@@ -1,0 +1,201 @@
+.contact *{
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.contact{
+    position: absolute;
+    bottom: 20px;
+    min-width: 300px;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+    border: solid 1px black;
+    padding: 5px 0px 5x 0px ;
+    border: solid 2px var(--blue);
+}
+.head{
+    display: flex;
+    padding: 0px 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.head h1{
+    font-size: 2em;
+    color: var(--blue);
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+#popbut{
+    display: none;
+}
+#popbut+label{
+    display: inline-block;
+    border: 3px solid var(--blue);
+    background: -webkit-radial-gradient(circle, var(--blue) 0%, transparent 0%);
+    cursor: pointer;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    z-index: 1;
+}
+#popbut:checked+label{
+    background-clip: content-box;
+    background-color: var(--blue);
+}
+.body{
+    width: 100%;
+    /* border: solid 1px red; */
+    margin-top: 20px;
+}
+.rows, .checks{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    row-gap: 15px;
+}
+.rows div{
+    width: 100%;
+}
+.rows input{
+    width: 100%;
+    padding:12px 10px;
+    letter-spacing: 0.8px;
+    outline: solid 2px var(--blue);
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--grey_black);
+    font-family: inherit;
+}
+.rows span {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0,-50%);
+    font-size: 14px;
+    transition: ease-in-out 0.1s;
+    pointer-events: none;
+    font-weight: 600;
+    opacity: 0.85;
+}
+.rows input:focus+span, .rows input:not(:placeholder-shown)+span{
+    font-family: sans-serif;
+    transform: translate(0,-50%);
+    transition: ease-in-out 0.1s;
+    letter-spacing: 0.7px;
+    top: 0;
+    font-size: 12px ;
+    opacity: 1 ;
+    color: white ;
+    padding: 2px 5px;
+    padding-bottom: 2px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0px;
+    background-color: var(--blue);
+}
+.checks{
+    margin: 30px 0px;
+    color: var(--blue);
+}
+.checks div,.checks div label{ 
+    display: flex;
+    align-items: flex-start;
+    column-gap: 5px;
+}
+.checks div input {
+    display: none;
+}
+.checks div label{
+    cursor: pointer;
+    column-gap: 15px;
+}
+.checks div label span:first-child{
+    box-sizing: content-box;
+    flex-shrink: 0;
+    top: 1px;
+    padding: 2px;
+    height: 11px;
+  width: 11px;
+
+  border: 3px solid var(--blue);
+  border-radius: 3px;
+  display: inline-block;
+}
+.checks div input[type=checkbox]:checked+label span:first-child{
+    background-color: var(--blue);
+
+background-clip: content-box;
+
+}
+.button {
+    padding: 0px 10px;
+    margin-bottom: 30px;
+}
+.button button{
+    width:  100%;
+    padding: 10px 0px;
+    font-weight: 600;
+    color: white;
+    font-size: 20px;
+    background-color: #5272ffea;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button button:hover{
+    background-color: var(--blue);
+}
+.button button:active{
+    background-color: var(--yellow);
+    color: white;
+}
+#error{
+    height: 20px;
+    margin-bottom: 20px;
+    color: red;
+    font-weight: 600;
+    padding-left: 10px;
+    letter-spacing: 0.9px;
+}
+
+.animate_hide{
+    animation: hide 0.2s linear forwards;
+    transform-origin:top ;
+}
+.animate_show{
+    animation: show 0.2s linear forwards;
+    transform-origin:top ;
+}
+@keyframes show {
+    0%{
+        max-height: 0;
+        visibility: hidden;
+        transform: scaleY(0);
+    }
+    100%{
+        max-height: 450px;
+        visibility: visible;
+        transform: scaleY(1);
+    }
+}
+@keyframes hide {
+   0%{
+    visibility: visible;
+        max-height: 450px;
+       transform: scaleY(1);
+   }
+   5%{
+    transform: scaleY(1);
+}
+   100%{
+        margin: 0px;
+        max-height: 0px;
+        visibility: hidden;
+        transform: scaleY(0);
+   }
+}

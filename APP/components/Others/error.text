@@ -1,0 +1,24 @@
+-------------->>>>> Custom Select Component 
+Default chosen value not shows colored in options bar.
+we have to add a callback function to retrive the chosen option data to parent Component
+In single option select, scrollbar overflowing vertically out.
+optimize select Component in event listening of outside click
+
+
+-------------->>>> In css of many components
+SVG should be use inline between elments, not in "CSS {Content}"
+
+-------------->>>> Slider Component in House
+left, right icons are not showing, becasue pseudo element selectors are not working 
+
+
+-------------->>>> MongoDB Indexes 
+we need to check mongoDB indexes unwantedly increasing index size 
+
+--------------->>>> mongoDB skip
+skip not stopping data after reaching max value
+
+
+--------------->>>> Analytics
+
+when i switched the page from Analytics to listings with the pointing device as touch, then a error is arrived.

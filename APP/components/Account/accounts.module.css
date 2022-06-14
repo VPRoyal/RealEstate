@@ -1,0 +1,238 @@
+.account{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.opts{
+    display: flex;
+    position: relative;
+    text-align: center;
+}
+.opts a{
+    cursor: pointer;
+    font-family: sans-serif;
+    position: relative;
+    text-decoration: none;
+    margin: 0px;
+    padding: 3px 10px;
+    font-size: 20px;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+.opts a:nth-child(1){
+    margin-left: auto;
+    background-color: var(--blue);
+    border:3px solid var(--blue) ;
+}
+.opts a:nth-child(2){
+    margin-right: auto;
+    background-color: var(--green);
+    border:3px solid var(--green) ;
+}
+.opts a:hover{
+    filter: brightness(80%);
+}
+.box{
+    display: block;
+    max-width: 400px;
+    min-width: 300px;
+    border: solid 3px var(--green);
+    border-radius:5px;
+    padding: 10px 30px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.head, .body, .footer{
+    width: 100%;
+    position: relative;
+}
+.head{
+    padding: 30px 0px;
+}
+.logo{
+    display: block;
+    position: relative;
+    margin: 0px;
+    margin-bottom: 20px;
+    /* margin-top: 20px; */
+}
+.logo img{
+    position: relative;
+    width: 100px;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+.head h1{
+    margin: 0px;
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    font-family: sans-serif;
+    color: var(--grey_black);
+
+}
+.head hr{
+    display: inline-block;
+    margin-left: 30px;
+    width: 50%;
+    border: 2px solid var(--green); 
+    border-radius: 5px;
+    position: relative;
+}
+.body div{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+.body div svg, .body div path{
+    color: var(--green);
+}
+.body div input{
+    border: solid 1px black;
+    border: 0px;
+    border-bottom: solid 2px var(--green);
+    color: var(--grey_black);
+    font-size: 16px;
+    font-weight: 200;
+    width: 300px;
+    margin: 10px;
+    padding: 5px 10px;
+}
+.body div input:focus{
+    border-color: var(--grey_black);
+}
+
+#num label{
+    border: solid 2px var(--green);
+    position: relative;
+    display: flex;
+    margin: 10px;
+    margin-right: 0px;
+    padding: 0px;
+    align-content: center;
+}
+#num select{
+    all: unset;
+    font-size: 14px;
+    font-family: sans-serif;
+    width: 80px;
+    padding: 5px ;
+    border: 0px solid var(--green);
+    color: var(--grey_black);
+    appearance:none;
+}
+#num label::after{
+    font-size: 14px;
+    content: "▼";
+    color: var(--green);
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translate(0px,-50%);
+    margin-right: 4px;
+    height: fit-content;
+    pointer-events: none;
+}
+#num input{
+    width: 195px;
+}
+.footer{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    padding: 30px 0px;
+}
+.footer button{
+    border: 2px solid var(--green);
+    cursor: pointer;
+    margin-left: 35px;
+    margin: 20px ;
+    width: 30%;
+    max-width: 150px;
+    padding: 5px 0px;
+    font-size: 16px;
+    background-color: white;
+    color: var(--grey_black);
+    border-radius: 5px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+.footer button:active{
+    transition: ease-in-out 0.1s;
+    background-color: var(--green);
+    color: white;
+}
+.footer a{
+    font-size: 14px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-left: 20px;
+    color: var(--green);
+}
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.login, .login hr, .login button, .login .body div input{
+    border-color: var(--blue);
+}
+.login div svg, .login div path, .login .footer a{
+    color: var(--blue);
+}
+.login button:active{
+    background-color: var(--blue);
+}
+.login .body div input:focus{
+    border-color: var(--grey_black);
+}
+#message{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size:16px;
+    color: red;
+    letter-spacing: 0.5px;
+    padding: 3px 10px ;
+    border-radius: 5px;
+    font-family: sans-serif;
+    /* font-weight: 600; */
+}
+@media only screen and (max-width: 420px){
+    
+    .body div input{
+        width: 100%;
+        font-size: 14px;
+    }
+    #num{
+        font-size: 12px;
+    }
+    #num input{
+        width: 65%;
+    }
+    .account {
+        width: 100%;
+    }
+    .head h1{
+        font-size: 26px;
+    }
+    .body div svg{
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+}
+@media only screen and (max-width: 350px){
+    .box{
+        padding: 10px;
+    }
+    #num input{
+        width: 45%;
+    }
+}

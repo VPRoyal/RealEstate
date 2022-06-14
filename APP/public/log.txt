@@ -1,0 +1,2 @@
+I want to make a rating bar.
+Need to send null from server if requested object we get is empty. Don't need to use object entries method in flyer.js l-36.

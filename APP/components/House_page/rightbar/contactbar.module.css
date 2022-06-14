@@ -1,0 +1,308 @@
+.contact{
+    font-size: 16px;
+    background-color: var(--blue);
+    margin-top: 20px;
+    top:100px;
+    color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+}
+.contact>div{
+    padding:10px 20px;
+    width: 100%;
+}
+.contact h1{
+    padding: 10px 20px;
+    text-align: center;
+}
+.contact>div>div{
+    margin-top: 40px;
+
+}
+.rows{
+    margin-top: 0px !important;
+}
+.rows div{
+    position: relative;
+}
+.rows input{
+    padding: 10px 10px;
+    outline: none;
+    border: none;
+    margin: 10px 0px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--grey_black);
+    font-family: inherit;
+}
+.placeholder{
+    display: block;
+    position: absolute;
+    color: var(--grey_black);
+    font-weight: 600;
+    opacity: 0.85;
+    top: 50%;
+    left: 10px;
+    font-size: 14px;
+    transform: translate(0,-50%);
+    transition: ease-in-out 0.1s;
+    pointer-events: none;
+}
+/* .rows input:focus{
+    -moz-outline-radius: 5px;
+    outline: solid red 2px;
+} */
+.rows input:focus~span,.rows .placeholder-foc{
+    transition: ease-in-out 0.1s ;
+    transform: translate(0,-160%) ;
+    font-size: 12px ;
+    opacity: 1 ;
+    color: white ;
+    padding: 2px 5px;
+    padding-bottom: 2px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0px;
+    background-color: var(--grey_black);
+    /* background-color: red; */
+}
+.check-row{
+margin: unset !important;
+margin-top: 20px !important;
+
+}
+.check-row div{
+    display: flex;
+    vertical-align: text-top;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.check-row div label{
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    word-wrap: break-word;
+}
+.check-row div label:hover{
+    color: var(--yellow);
+}
+.button{
+    margin-bottom: 30px;
+}
+.button button{
+    font-weight: 600;
+    padding:10px 0px;
+    color: var(--grey_black);
+    font-size: 20px;
+    background-color: white;
+    border: none;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button button:hover{
+    background-color: var(--yellow);
+    color: white;
+}
+.popbut{
+    display: none;
+}
+.error-pointer{
+    position: absolute;
+    width: fit-content;
+    color: white;
+    font-size: 14px;
+    height: auto;
+    word-wrap: break-word;
+    padding: 5px 10px;
+    background-color: rgba(255, 0, 0,0.7);
+    right: 30%;
+    font-weight: 600;
+    transform: translate(50%,-100%);
+    border-radius: 3px;
+  }
+  .error-pointer::after{
+    content: "";
+    position: absolute;
+    width: 0.8em;
+    height: 0.8em;
+    top: 100%;
+    right: 10%;
+    margin-top: -1em;
+    transform: rotate(45deg) translate(0,100%) ;
+    background: -webkit-linear-gradient(135deg, rgba(255, 0, 0,0.7) 50% , transparent 50%);
+  
+  }
+
+@media only screen and (max-width: 1200px){
+    .rows{
+        margin-top: 20px !important;
+    }
+    .rows+div+div{
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 1020px){
+.contact-sell{
+    background-position: unset;
+    width: 60%;
+    min-width:270px;
+    max-width: 350px;
+    right: 10px;
+    top: 100px;
+    bottom: 20px;
+    height: 100%;
+    position: fixed;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background: rgba(82, 113, 255,1);
+    z-index: 1;
+    background: -webkit-linear-gradient(45deg, var(--orange) 0%, rgba(82, 113, 255,1) 33%, var(--orange) 66%, rgba(82, 113, 255,1) 100%);
+    background-size: 400% 400%;
+    animation: back 2s linear infinite;
+}
+.error-pointer{
+    font-size: 12px !important;
+    transform: translate(50%,-120%);
+}
+@keyframes back {
+    0% {
+        background-position: 100% 0%
+    }
+    100% {
+        background-position: 15% 100%
+    }
+}
+.contact-sell h1{
+    font-size: 21px;
+    text-align: center;
+    padding: 10px;
+    padding-right: 25px;
+    position: relative;
+    width: 100%;
+}
+.contact-sell>div{
+    padding: 10px 5%;
+}
+.rows{
+    margin-top: 0px !important;
+}
+.rows div input{
+    margin: 5px 0px;
+    margin-bottom: 3%;
+    /* height: 35px; */
+}
+.contact-sell>div>div{
+    margin: 20px 0px;
+    margin-bottom: 10px;
+}
+.contact-sell h1~div{
+    height: 0px;
+    padding: 0px;
+    overflow-y: hidden;
+    visibility: hidden;
+}
+.popbut{
+    display: block;
+    border: 3px solid white;
+    background: -webkit-radial-gradient(circle, white 0%, transparent 0%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 22px;
+    transform: translate(0,-50%);
+    border-radius: 100%;
+    right: 0px;
+    margin: 0px 10px;
+    z-index: 1;
+}
+
+.contact-sell:hover{
+    cursor: pointer;
+}
+.popanimate{
+    animation: pop 0.2s linear 0s 1 normal forwards;
+}
+.boxanimate{
+    animation: show 1s linear 0s 1 normal forwards;
+}
+.boxanimaterev{
+    animation: hide 0.7s linear 0s 1 normal forwards;
+}
+@keyframes pop {
+    from{
+        background: -webkit-radial-gradient(circle, white 0%, transparent 0%);
+    }
+    to{
+        background: -webkit-radial-gradient(circle, white 30%, transparent 30%);
+    }
+}
+@keyframes show {
+    0%{
+        height: 0px;
+        padding: 0px;
+        visibility: hidden;
+    }
+    9%{
+        visibility: hidden;
+    }
+    10%{
+        
+        visibility: visible;
+    }
+    25%{
+        padding: 10px 5%;
+
+    }
+    50%{
+        height: 350px;
+    }
+    99%{
+        height: 100%;
+    }
+    100%{
+        padding: 10px 5%;
+        height: 100%;
+        visibility: visible;
+    }
+}
+
+@keyframes hide {
+    0%{
+        visibility: visible;
+        padding: 10px 5%;
+        height: 100%;
+    }
+    25%{
+        visibility: visible;
+        padding: 10px 5%;
+        height: 360px;
+    }
+    50%{
+        visibility: visible;
+        padding: 10px 5%;
+        height: 250px;
+    }
+    75%{
+        visibility: visible;
+        height: 125px;
+    }
+    100%{
+        visibility: hidden;
+        padding: 0px 10%;
+        height: 0px;
+    }
+
+}
+}

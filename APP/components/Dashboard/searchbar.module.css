@@ -1,0 +1,96 @@
+.searchbar{
+    position: relative;
+    display: block;
+    margin-left: 20px;
+    width: auto;
+    max-width: 400px;
+    min-width: 100px;
+    background-color: rgba(255, 222, 89,1);
+    border-radius: 10px;
+}
+.searchbar .inptbar{
+    position: relative;
+    width: auto;
+    display: flex;
+    margin: 0px 10px;
+}
+.inptbar input{
+    position: relative;
+    flex-grow: 1;
+    height: 35px;
+    padding: 5px 10px;
+    border: none;
+    max-width: 90%;
+    background-color: inherit;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--grey_black);
+}
+.inptbar input::placeholder{
+    opacity: 0.7;
+    font-size: 14px;
+}
+.inptbar i{
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    background-color: inherit;
+    position: relative;
+    cursor: pointer;
+}
+.inptbar i::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-30%);
+}
+#srchbtn::after{
+    content:url(/icons/search-F5F5F5-white20px-stroke.svg) ;
+}
+
+#clearbtn::after{
+content: url("/icons/x-circle-grey-16px.svg");
+}
+#clearbtn:hover::after{
+    content: url("/icons/x-circle-FF5757-Orange-16px.svg");
+    }
+
+    .suggstn-box{
+        display: block;
+        z-index: 1;
+        background-color: white;
+        padding-top: 2px;
+     }
+     .suggstn-box ul{
+         margin: 0px;
+         padding: 0px;
+         list-style: none;
+     }
+     .suggstn-box ul li{
+         font-family: sans-serif;
+         color:  #39424E;
+         font-size: 16px;
+         font-weight: 700;
+         padding: 10px 10px 10px 20px;
+         cursor: pointer;
+         background-color:white;
+     }
+     .suggstn-box ul li:hover{
+         background-color:var(--yellow);
+         color: white;
+     }
+     .suggstn-box ul li a{
+         align-items: center;
+         display: flex;
+         justify-content: space-between;
+         color:  inherit;
+         text-decoration: none;
+     }
+     .suggstn-box ul li a span{
+         color: inherit;
+     }
+     .suggstn-box ul li a span:nth-child(2){
+         color: var(--blue);
+     }

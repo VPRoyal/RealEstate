@@ -1,0 +1,84 @@
+.select{
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    margin: 0px !important;
+}
+.select div, .options ul, .options li{
+    display: block;
+    width: auto;
+    position: relative;
+    padding: 0px;
+    margin: 0px !important;
+}
+.bar{
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 6px !important;
+}
+.bar span:first-child{
+    font-size: 14px;
+    font-weight: 600;
+    overflow: hidden;
+  text-overflow: ellipsis;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 60px;
+    color: var(--blue);
+}
+.bar span:last-child{
+    padding-left: 5px;
+    width: 25px;
+    height: 25px;
+}
+.bar span svg, .bar span path{
+width: 20px;
+height: 20px;
+position: relative;
+left: calc(50% - 10px);
+top: calc(50% - 10px);
+}
+.bar span svg:last-child{
+    display: none;
+}
+.bar span:last-child:hover{
+    cursor: pointer;
+}
+.bar span:last-child:hover>svg{
+    fill: var(--blue);
+}
+.select div{
+    border: var(--blue) solid 1px;
+    border-radius: 2px;
+}
+.options{
+    position: absolute!important;
+    background-color: white !important;
+    min-width: 100%;
+    width: auto !important;
+    z-index: 1000;
+    top: calc( 100% - 1px);
+}
+.options ul{
+    list-style: none;
+    padding: 0px;
+    transition: 0.3s ease-in-out;
+    max-height:100px ;
+    overflow-y: scroll;
+}
+
+.options ul li{
+    padding: 2px 5px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.options ul li:hover{
+    background-color: var(--blue);
+    color: white;
+    cursor: pointer;
+}
+.options ul li:active{
+    background-color: var(--yellow);
+}
+

@@ -1,0 +1,26 @@
+[{
+    "pid":"0101",
+    "title":"A House",
+    "images":["/pexels-aleksejs-bergmanis-681335.jpg","/pexels-curtis-adams-3288102.jpg","/pexels-nextvoyage-1481105.jpg"],
+    "rate":2
+},
+{
+    "pid":"0102",
+    "title":"B House",
+    "images":["/pexels-pixabay-53610.jpg","/pexels-pixabay-164558.jpg","/pexels-pixabay-259588.jpg"],
+    "rate":15
+
+},
+{
+    "pid":"0103",
+    "title":"c House",
+    "images":["/pexels-aleksejs-bergmanis-681335.jpg","/pexels-curtis-adams-3288102.jpg","/pexels-nextvoyage-1481105.jpg"],
+    "rate":22
+
+},
+{
+    "pid":"0104",
+    "title":"D House",
+    "images":["/pexels-pixabay-53610.jpg","/pexels-pixabay-164558.jpg","/pexels-pixabay-259588.jpg"],
+    "rate":30
+}]

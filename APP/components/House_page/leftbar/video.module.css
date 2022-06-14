@@ -1,0 +1,48 @@
+.vdeo-tur{
+    position: relative;
+    display: block;
+}
+.vdeo-tur div{
+    all: unset;
+    position: relative;
+    display: block;
+    margin: 50px 0px 10px 0px;
+}
+.vdeo-tur div a{
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--blue);
+    font-weight: 700;
+    border: 2px solid var(--blue);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.vdeo-tur div a:hover{
+    background-color: var(--blue);
+    color: white;
+}
+.vdeo-tur div:nth-of-type(2) iframe{
+    width: 80%;
+}
+@media only screen and (max-width: 1020px){
+    .vdeo-tur{
+        padding-right: 20px !important;
+    }
+    .vdeo-tur iframe{
+        width: 100% !important;
+        height: 400px !important;
+    }
+}
+@media only screen and (max-width: 550px){
+    .vdeo-tur iframe{
+        height: 300px !important;
+    }
+
+}
+@media only screen and (max-width: 480px){
+    .vdeo-tur iframe{
+        height: 200px !important;
+    }
+
+}

@@ -1,0 +1,72 @@
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    width: 100%;
+}
+.leftside{
+    display: block;
+    width: 80%;
+    position: relative;
+}
+.button-box{
+    display: block;
+    position: relative;
+    width: 100%;
+    padding:20px 10px;
+    margin-top: 10px;
+}
+.button-box button{
+    width: 20%;
+    position: absolute;
+    padding: 5px 0px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border: 0px;
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: var(--blue);
+
+    border-radius: 5px;
+    top: 50%;
+}
+.button-box button:nth-child(1){
+    left: 38%;
+    transform: translate(-50%,-50%);
+
+}
+.button-box button:nth-child(2){
+    right: 38%;
+    transform: translate(50%, -50%);
+}
+.button-box button:hover{
+    background-color: var(--orange);
+}
+.rightside{
+    display: block;
+    width: auto;
+    max-width: 0%;
+
+}
+@media only screen and (max-width: 1020px){
+.rightside{
+width: 100%;
+max-width: 100%;
+}
+.leftside{
+    width:  100%;
+}
+}
+@media only screen and (max-width: 600px){
+    .container{
+        display: block;
+    }
+    .leftside{
+        width: auto;
+        max-width: 100%;
+    }
+    .rightside{
+        max-width: 100%;
+    }
+}

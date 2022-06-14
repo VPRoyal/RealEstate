@@ -1,0 +1,117 @@
+.leftbar *{
+    box-sizing: border-box;
+    position: relative;
+}
+.leftbar{
+    position: relative;
+    background-color:white;
+}
+.nav{
+    width: 100%;
+}
+.nav ul{
+    row-gap: 1px;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+}
+.nav ul li{
+    width: 100%;
+}
+.nav ul li a {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    text-decoration: none;
+    padding: 20px 2px;
+}
+.nav ul li a span {
+    font-family: open sans, Helvetica, sans-serif;
+    color: rgba(82, 113, 255,0.8);
+    font-weight: 600;
+
+}
+ .link-icon{
+    display: block;
+    padding: 0px;
+    min-width: 35px;
+    height: 40px;
+}
+.link-icon svg{
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    fill: rgba(82, 113, 255,0.8);
+}
+.link-icon svg path{
+    stroke-width: 2.5;
+    display: inline-block;
+    height: auto;
+}
+.nav li:hover{
+    background: rgba(82, 113, 255,0.8);
+}
+.nav li:hover .link-icon svg{
+    fill: white;
+    height: 100%;
+ }
+ .nav li:hover span{
+    color: white;
+}
+#active{
+    background-color: rgba(82, 113, 255,0.8);
+}
+#active span, #active svg{
+    color: white;
+    fill: white;
+}
+
+
+@media only screen and (max-width: 1020px){
+    .link-icon{
+        min-width: 30px;
+        height: 35px;
+
+    }
+}
+@media only screen and (max-width: 850px){
+    .link-icon{
+        min-width: 25px;
+        height: 30px;
+
+    }
+    .nav li a span{
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+@media only screen and (max-width: 700px){
+    .nav li a span:nth-child(2){
+        display: none;
+    }
+    .link-icon{
+        min-width: 35px;
+        height: 40px;
+    }
+}
+@media only screen and (max-width: 550px){
+    .link-icon{
+        min-width: 30px;
+        height: 35px;
+    }
+    .nav ul{
+        flex-direction: row;
+        column-gap: 1px;
+    }
+}
+@media only screen and (max-width: 420px){
+    .link-icon{
+        min-width: 25px;
+        height: 30px;
+    }
+}

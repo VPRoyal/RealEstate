@@ -1,0 +1,191 @@
+.flyer::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: var(--flyer-height);
+    background-image: url("/pexels-jason-boyd-3209035.jpg");
+    filter: brightness(60%);
+    z-index: -1;
+}
+.flyer{
+    height: var(--flyer-height);
+    overflow: hidden;
+}
+.flyer-A{
+    position: static;
+    left: 0px;
+    right: 0px;
+    padding-top: 50px;
+    margin-bottom: 100px;
+}
+.flyer-B{
+    width: var(--flyer-B_width);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0px);
+}
+/*++++++++++++++++>>>>>>>>>>>> Flyer Heading */
+.fly-title h1{
+    opacity: 1;
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    
+}
+/*+++++++++++>>>>>>>>>>>> Search Options */
+
+.srch-opts{
+    display: flex;
+}
+.srch-opts button{
+    margin: 0px;
+    background: none;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+}
+.srch-opts button:hover{
+    background-color: var(--yellow);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: var(--grey_black);
+
+}
+/*------------>>>>>>>> Search Bar */
+.fly-searchbar{
+    display: block;
+    margin: 0px;
+}
+.fly-searchbar div{
+    display: flex;
+    height: var(--search-btn-width);
+    background-color: white;
+}
+#searchbar{
+    width: 100%;
+    padding:5px 5px 5px 10px;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: inherit;
+    border: 4px solid var(--yellow);
+    border-right: 0px;
+
+}
+#clearbtn{
+    cursor: pointer;
+    background-color: white;
+    border: 4px solid var(--yellow);
+    border-left: 0px;
+    border-right:0px;
+    padding: 0px 10px;
+    }
+#clearbtn::after{
+content: url("/icons/x-circle.svg");
+}
+#clearbtn:hover::after{
+    content: url("/icons/x-circle-FF5757-Orange-16px.svg");
+    }
+#searchbuttn{
+    background-color:var(--yellow);
+    cursor: pointer;
+min-width: var(--search-btn-width);
+border: 4px solid var(--yellow);
+padding: 0px;
+text-decoration: none;
+}
+#searchbuttn::after{
+    content: url("/icons/search-F5F5F5-white20px-stroke.svg");
+    font-weight: 900;
+    filter: brightness(200%);
+}
+#searchbuttn:hover{
+    background-color:var(--orange);
+}
+
+/*------------>>>>>>>> Suggestion Box */
+.suggstn-box{
+   display: block;
+   position: relative;
+   z-index: 2;
+   background-color: white;
+}
+.suggstn-box ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.suggstn-box ul li{
+    font-family: sans-serif;
+    color:  #39424E;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 10px 10px 20px;
+    cursor: pointer;
+    background-color:white;
+}
+.suggstn-box ul li:hover{
+    background-color:var(--yellow);
+}
+.suggstn-box ul li {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    color:  inherit;
+    text-decoration: none;
+}
+.suggstn-box ul li span{
+    color: inherit;
+}
+.suggstn-box ul li span:nth-child(2){
+    color: var(--blue);
+}
+@media only screen and (max-width: 750px){
+    .flyer::before{
+        content: "";
+        background-image: url("/pexels-jason-boyd-3209035\ resized.jpg");
+    }
+    .fly-title h1{
+        font-size: 22px;
+        font-weight: bolder;
+    }
+    .fly-title h1 span:nth-child(2){
+        display: block;
+    }
+    .flyer-A{
+        padding-top: 30px;
+        margin-bottom: 30px;
+    }
+    .srch-opts button{
+        font-size: 12px;
+    }
+    #searchbar{
+        font-size: 12px;
+    }
+    .suggstn-box ul li{
+        font-size: 12px;
+        padding: 10px;
+    }
+    .suggstn-box ul li a{
+        align-items: center;
+    }
+    .suggstn-box ul li a span:nth-child(2){
+        font-size: 10px;
+    }
+    #clearbtn::after{
+        content: url("/icons/x-circle\ 14px.svg");
+        }
+    #clearbtn:hover::after{
+        content: url("/icons/x-circle-FF5757-Orange-14px.svg");
+    }
+    #searchbuttn::after{
+        content: url("/icons/search-F5F5F5-white16px-stroke.svg");
+    }
+}

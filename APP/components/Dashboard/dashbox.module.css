@@ -1,0 +1,37 @@
+.wrapper{
+    position: relative;
+    display: block;
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: white;
+}
+.left{
+    position: sticky;
+    top: 0px;
+    align-self: flex-start;
+    display: inline-block;
+    width: 10%;
+    max-width: 200px;
+    min-width: 100px;
+    z-index: 100;
+}
+.right{
+    display: inline-block;
+    width: 90%;
+    max-width: calc( 100% - 100px );
+    z-index: 0;
+}
+@media only screen and (max-width: 550px){
+    .container{
+        display: block;
+    }
+    .left, .right{
+        display: block;
+        width: 100%;
+        max-width: unset;
+        min-width: unset;
+    }
+}

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16"
+   height="10"
+   fill="currentColor"
+   class="bi bi-arrow-right"
+   viewBox="0 0 16 10"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="arrow-colored 16X9px.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2376">
+      <stop
+         style="stop-color:#ff5757;stop-opacity:1;"
+         offset="0"
+         id="stop2364" />
+      <stop
+         style="stop-color:#ff5757;stop-opacity:1"
+         offset="0.39424205"
+         id="stop2366" />
+      <stop
+         style="stop-color:#ffde59;stop-opacity:1"
+         offset="0.39424205"
+         id="stop2368" />
+      <stop
+         style="stop-color:#ffde59;stop-opacity:1"
+         offset="0.60600978"
+         id="stop2370" />
+      <stop
+         style="stop-color:#5271ff;stop-opacity:1"
+         offset="0.60600978"
+         id="stop2372" />
+      <stop
+         style="stop-color:#5271ff;stop-opacity:1"
+         offset="1"
+         id="stop2374" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2342">
+      <stop
+         style="stop-color:#ff5757;stop-opacity:1;"
+         offset="0"
+         id="stop2338" />
+      <stop
+         style="stop-color:#ff5757;stop-opacity:1"
+         offset="0.39553851"
+         id="stop2358" />
+      <stop
+         style="stop-color:#ffde59;stop-opacity:1"
+         offset="0.39553851"
+         id="stop2356" />
+      <stop
+         style="stop-color:#ffde59;stop-opacity:1"
+         offset="0.60428119"
+         id="stop2346" />
+      <stop
+         style="stop-color:#5271ff;stop-opacity:1"
+         offset="0.60428119"
+         id="stop2348" />
+      <stop
+         style="stop-color:#5271ff;stop-opacity:1"
+         offset="1"
+         id="stop2340" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2342"
+       id="linearGradient2344"
+       x1="7.0820312"
+       y1="4.7929688"
+       x2="7.0820312"
+       y2="1.34375"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.6206014,0,0,2.6206014,-8.8701216,-0.0409471)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2376"
+       id="linearGradient2362"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.6206014,0,0,2.6206014,-8.8701215,-3.0409471)"
+       x1="7.0820312"
+       y1="4.7929688"
+       x2="7.0820312"
+       y2="1.34375" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview6"
+     showgrid="false"
+     inkscape:lockguides="true"
+     inkscape:zoom="36.75217"
+     inkscape:cx="13.579212"
+     inkscape:cy="5.0405918"
+     inkscape:window-x="-9"
+     inkscape:window-y="41"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     id="path2299"
+     style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:url(#linearGradient2362);fill-opacity:1;stroke:none;stroke-width:0.785981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+     d="M 9.6890593,0.480486 8.6346763,2.3128598 11.634037,4.042866 H -1e-7 V 5.952015 H 11.639155 L 8.6346763,7.68714 9.6890593,9.519514 16,5.8752398 15.493282,4.9948812 16,4.1196415 Z" />
+</svg>

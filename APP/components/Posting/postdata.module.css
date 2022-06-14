@@ -1,0 +1,429 @@
+.data-wrap{
+    position: relative;
+    width: 100%;
+    display: block;
+    padding: 10px 10%;
+
+}
+.data-box{
+    position: relative;
+    display: flex;
+    width: 100%;
+    /* border: var(--blue) solid 1px; */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /*  IE and Edge */
+    scrollbar-width: none;
+    
+}
+.data-box::-webkit-scrollbar{
+    display: none;
+}
+.data-box>div{
+    scroll-snap-align: center;
+    position: relative;
+    display:block;
+    flex-grow: 0;
+    width: 100%;
+    flex-shrink: 0;
+    padding: 10px 40px;
+    transition: 0.6s linear;
+}
+
+/*-------->>>>>>>> Custom Radios */
+
+/* >>>>>>> Radio One */
+.radio{
+    display: inline-flex;
+    width: min-content;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+    padding-left: 2px;
+    cursor: pointer;
+}
+.radio input{
+    position: relative;
+    display: none;
+}
+.custom{
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    align-items: center;
+    background-color: var(--yellow);
+    margin:0px 5px;
+    border-radius: 50%;
+}
+.radio:hover .custom{
+    background-color: rgba(82, 113, 255,0.6);
+}
+.custom::after{
+content: "";
+position: absolute;
+width: 50%;
+height: 50%;
+left: 50%;
+transform: translateX(-53%);
+background-color:white;
+border-radius: 50%;
+display: none;
+}
+.radio input:checked~.custom::after{
+    display: inline-block;
+}
+.radio input:checked~.custom{
+    background-color: var(--blue);
+}
+
+/* >>>>>>> Radio two */
+.radio2{
+    display: inline-flex;
+    width: max-content;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+    padding-left: 2px;
+    cursor: pointer;
+}
+.radio2 input{
+    display: none;
+    position: relative;
+}
+.custom2{
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--yellow);
+    padding: 5px;
+    margin: 5px;
+    margin-left: 0px;
+    border-radius:5px ;
+    color: white;
+}
+.radio2 input:checked~.custom2{
+    background-color: var(--blue);
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.16),0 8px 20px 0 rgba(0,0,0,0.12);
+}
+
+
+
+/*------------>>>>>>>>>> Location */
+.location{
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.location-drop,.location-drop>div{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.location-drop>div{
+    width: max-content;
+    margin: 10px 0px;
+
+}
+.location-drop>div>div{
+    width: max-content;
+    display: flex;
+    position: relative;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    border: 1.5px solid var(--blue);
+    border-radius: 2px;
+}
+.location-drop>div>div input{
+    border: none;
+    padding: 2px 5px;
+    color: var(--grey_black);
+    font-weight: 600;
+
+
+}
+.location-drop>div>ul{
+    display: block;
+    width: 100%;
+    position: relative;
+    margin: 0px;
+    padding:0px;
+    border: 1.5px solid var(--blue);
+    border-top: none;
+    list-style: none;
+    display: none;
+}
+.location-drop label{
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.location-drop>div>ul li{
+    display: block;
+    width: 100%;
+    padding: 3px 5px;
+    position: inherit;
+    cursor: pointer;
+}
+.location-drop>div>ul li:hover{
+    background-color: var(--yellow);
+    color: white;
+}
+#down-arrow{
+    position: relative;
+    box-sizing: content-box;
+    padding: 4px 4px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+}
+#down-arrow:hover{
+    /* background-color: var(--blue); */
+}
+#down-arrow::after{
+    content: url("/icons/caret-down-blue-16px.svg");
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    display: inherit;
+}
+.location-drop input[type="number"]{
+    -moz-appearance: textfield;
+    display: block;
+    margin: 10px 0px;
+    border-radius: 3px;
+    border: 1.5px solid var(--blue);
+    color: var(--grey_black);
+    font-weight: 600;
+    padding: 3px 5px;
+}
+
+
+/*----------->>>>>>>>>>. Descriptionn section */
+
+
+.description>div{
+    display: block;
+    position: relative;
+    margin: 40px 0px;
+}
+.description>div h3{
+    display:  block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    margin: 10px 0px;
+    font-size: 16px;
+}
+.description>div input{
+    border: 1.5px solid var(--blue);
+    border-radius: 2px;
+}
+.description>div textarea{
+    position: relative;
+    color: var(--grey_black);
+    border: 1.5px solid var(--blue);
+    border-radius: 2px;
+    font-weight: 600;
+    padding: 10px;
+    width: 40%;
+    min-width: 200px;
+    height: 100px;
+    resize: none;
+}
+
+
+/*--------->>>>>>>> Facilities */
+.facilities>div{
+position: relative;
+display: block;
+margin: 40px 0px;
+}
+.facilities>div h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    margin: 15px 0px;
+    font-size: 16px;
+}
+.facilities>div>div{
+    display: block;
+    position: relative;
+}
+.facilities>div>div>div{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 10px 0px;
+}
+.facilities>div>div>div *{
+    margin-top: 5px;
+}
+.facilities>div>div>div:nth-child(1) select{
+    width: 150px;
+    margin-right: 5px;
+}
+.facilities>div>div>div:nth-child(1) input[type="number"]{
+    -moz-appearance: textfield;
+    width: 70px;
+    margin-right: 5px;
+    padding: 0px 5px;
+
+}
+.facilities>div>div>div:nth-child(1) input[type="text"]{
+margin-right: 5px;
+padding: 0px 5px;
+}
+.facilities>div>div>div:nth-child(1) button{
+    background-color: var(--blue);
+    color: white;
+    width: 70px;
+    cursor: pointer;
+    padding: 3px 5px;
+    border: none;
+    border-radius: 5px;
+}
+.facilities>div>div>div:nth-child(1) button:active{
+    background-color:var(--yellow) ;
+}
+.facilities>div>div>div:nth-child(2){
+    margin-top: 30px;
+}
+.facilities>div>div>div:nth-child(2) span{
+    background-color: var(--yellow);
+    border-radius: 10px;
+    padding: 3px 10px;
+    margin-right: 5px;
+    width: max-content;
+    color: white;
+    font-size: 18px;
+    font-family: fantasy;
+}
+
+/*--------->>>>>>>> Graphics */
+
+.graphics>div{
+position: relative;
+margin: 40px 0px;
+}
+.graphics>div>div:nth-of-type(2){
+    margin-top: 20px;
+}
+.upload-img{
+    display: block;
+    position: relative;
+    min-width: max-content;
+    width: 20%;
+    max-width: 150px;
+}
+.upload-img input{
+    display: none;
+}
+.upload-img label{
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: rgba(82, 113, 255,0.9);
+    text-transform: uppercase;
+    padding: 6px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+}
+.upload-img label:hover{
+    background-color: var(--blue);
+}
+.upload-img label:active{
+    background-color: var(--yellow);
+}
+
+.img-box{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: max-content;
+    margin-top: 10px;
+    border: solid 2px var(--blue);
+    opacity: 0.85;
+    padding: 5px;
+}
+.img-box>div{
+    width: 96px;
+    height: 72px;
+    position: relative;
+    margin: 2px;
+
+}
+.img-box>div img{
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#cross{
+    display: block;
+    position: absolute;
+    background-color: var(--blue);
+    border-radius: 50%;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+#cross::after{
+    content:url("/icons/x-circle-white-16px.svg");
+    display: inherit;
+    position: relative;
+    width: inherit;
+    height: inherit;
+}
+@media only screen and (max-width: 1020px){
+
+}
+@media only screen and (max-width: 750px){
+/* .outdoor>div>div:nth-child(1) *{
+    margin-top: 5px;
+} */
+}
+@media only screen and (max-width: 420px){
+    /*------>>>>>>> Main Section */
+    .data-box>div{
+        padding: 10px 20px;
+    }
+    .data-wrap{
+        padding: 10px 0px;
+    }
+    .data-box div h3{
+        font-size: 14px;
+    }
+    .data-box label{
+        font-size: 14px;
+    }
+    .data-box input{
+        font-size: 12px;
+        opacity: 0.9;
+    }
+    /*------>>>>>>>> Basic */
+
+
+
+    /*------>>>>>>>> Description */
+    .description>div textarea{
+        width: 100%;
+    }
+
+
+
+    /*------>>>>>>>> Faculty */
+
+
+
+
+    /*------>>>>>>>> Graphics */
+
+}

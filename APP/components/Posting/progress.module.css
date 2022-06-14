@@ -1,0 +1,448 @@
+.progress{
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    /* background-color: violet; */
+}
+.bulletin{
+    display: block;
+    width: 25%;
+    max-width: 300px;
+    position: relative;
+}
+.bulletin span{
+    display: block;
+    padding: 10px 0px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--blue);
+}
+.bulletin span:nth-child(1){
+    padding-bottom: 20px;
+}
+.linebar::after, .linebar::before{
+    content: '';
+    background-position: unset;
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    z-index: -1;
+    top: 50%;
+    background: var(--blue);
+    background: linear-gradient(to right, var(--orange) 50%, rgba(82, 113, 255,1) 50%);
+    background-size: 200% 200%;
+    background-position: 100%;
+}
+
+.linebar::before{
+    transform: translate(0,-50%);
+    left: 0%;
+}
+.linebar::after{
+    right: 0%;
+    transform: translate(0,-50%);
+}
+.bulletin:first-child .linebar::before{
+    display: none;
+}
+.bulletin:last-child .linebar::after{
+display: none;
+}
+.task-icon, .action-icon{
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.task-icon{
+    width: 40px;
+    height: 40px;
+}
+.action-icon{
+    border-radius: 50%;
+    background-color: white;
+    transform: translate(-50%,0);
+    border: solid 3px var(--blue);
+}
+.task-icon::after, .action-icon::after{
+    content: url("/icons/x-blue-16px-in-30px.svg");
+    display: inherit;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.bulletin:nth-child(1) .task-icon::after{
+    content: url("/icons/details-orange-40px.svg");
+
+}
+.bulletin:nth-child(2) .task-icon::after{
+    content: url("/icons/pencil-orange-40px.svg");
+}
+.bulletin:nth-child(3) .task-icon::after{
+    content: url("/icons/layers-orange-40px.svg");
+}
+.bulletin:nth-child(4) .task-icon::after{
+    content: url("/icons/image-orange-40px.svg");
+}
+
+/*-------->>>>>>>>>>> Style changing after render works in react */
+.working .action-icon{
+    animation: working2 1s linear 1 forwards;
+}
+.working .action-icon::after{
+    animation: working1 1s linear 1 forwards;
+}
+@keyframes working2{
+    0%{
+        border: solid 3px var(--blue);
+    }
+    99%{
+        border: solid 3px var(--blue);
+    }
+    100%{
+        border: solid 3px var(--orange);
+    }
+}
+@keyframes working1{
+    0%{
+        content: url("/icons/x-blue-16px-in-30px.svg");
+    }
+    99%{
+        content: url("/icons/x-blue-16px-in-30px.svg");
+    }
+    100%{
+        content: url("/icons/arrow-repeat-orange-25px-in-30px.svg");
+    }
+}
+
+.complete .action-icon{
+    background-color:var(--orange) ;
+    border: solid 3px var(--orange);
+}
+.complete .action-icon::after{
+    content: url("/icons/check-white-16px-in-30px.svg");
+}
+.complete+div .linebar::before{
+    animation: linebar_bfor 1s linear 1 forwards;
+}
+.complete .linebar::after{
+    animation: linebar_aftr 0.5s linear 1 forwards;
+}
+@keyframes linebar_bfor {
+    0% {
+        background-position: 100% 0%
+    }
+    50%{
+        background-position: 100% 0%
+    }
+    100% {
+        background-position: 0% 0%
+    }
+}
+@keyframes linebar_aftr {
+    0% {
+        background-position: 100% 0%
+    }
+    100% {
+        background-position: 0% 0%
+    }
+}
+.working_rev .action-icon{
+    animation: working_rev2 1s linear 1 forwards;
+    border:  solid 3px var(--orange);
+}
+.working_rev .action-icon::after{
+    animation: working_rev1 1s linear 1 forwards;
+
+}
+.working_rev+div .linebar::before{
+    animation: linebar_bfor_rev 0.5s linear 1 forwards;
+}
+.working_rev .linebar::after{
+    animation: linebar_aftr_rev 1s linear 1 forwards;
+}
+@keyframes working_rev1{
+    0%{
+        content: url("/icons/check-white-16px-in-30px.svg");
+    }
+    99%{
+        content: url("/icons/check-white-16px-in-30px.svg");
+    }
+    100%{
+        content: url("/icons/arrow-repeat-orange-25px-in-30px.svg");
+    }
+}
+@keyframes working_rev2{
+    0%{
+       background-color: var(--orange);
+    }
+    99%{
+        background-color: var(--orange);
+    }
+    100%{
+        background-color: white;
+    }
+}
+@keyframes linebar_aftr_rev {
+    0% {
+        background-position: 0% 0%
+    }
+    50%{
+        background-position: 0% 0%
+    }
+    100% {
+        background-position: 100% 0%
+    }
+}
+@keyframes linebar_bfor_rev {
+    0% {
+        background-position: 0% 0%
+    }
+    100% {
+        background-position: 100% 0%
+    }
+}
+.complete_rev .action-icon{
+    background-color:white ;
+    border: solid 3px var(--blue);
+}
+.complete_rev .action-icon::after{
+    content: url("/icons/x-blue-16px-in-30px.svg");
+}
+/* For first bulletin */
+.first .action-icon{
+border: solid 3px var(--orange);
+}
+.first .action-icon::after{
+    content: url("/icons/arrow-repeat-orange-25px-in-30px.svg");
+}
+/* For last bulletin */
+.last .action-icon{
+    border: solid 3px var(--orange);
+    background-color: var(--orange);
+    }
+    .last .action-icon::after{
+        content: url("/icons/check-white-16px-in-30px.svg");
+    }
+/*--------->>>>>>>> Media Queries */
+
+@media only screen and (max-width: 1020px){
+    .bulletin span{
+        font-size: 20px;
+    }
+    .bulletin span:nth-child(1){
+        padding-bottom: 30px;
+    }
+    .action-icon{
+        width: 25px;
+        height: 25px;
+    }
+    .action-icon::after{
+        content: url("/icons/x-blue-14px-in-25px.svg");
+    }
+    .task-icon{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .bulletin:nth-child(1) .task-icon::after{
+        content: url("/icons/details-orange-30px.svg");
+
+    }
+    .bulletin:nth-child(2) .task-icon::after{
+        content: url("/icons/pencil-orange-30px.svg");
+    }
+    .bulletin:nth-child(3) .task-icon::after{
+        content: url("/icons/layers-orange-30px.svg");
+    }
+    .bulletin:nth-child(4) .task-icon::after{
+        content: url("/icons/image-orange-30px.svg");
+    }
+    .complete .action-icon::after{
+        content: url("/icons/check-white-14px-in-25px.svg");
+    }
+    .complete_rev .action-icon::after{
+        content: url("/icons/x-blue-14px-in-25px.svg");
+    }
+    @keyframes working1{
+        0%{
+            content: url("/icons/x-blue-14px-in-25px.svg");
+        }
+        99%{
+            content: url("/icons/x-blue-14px-in-25px.svg");
+        }
+        100%{
+            content: url("/icons/arrow-repeat-orange-20px-in-25px.svg");
+        }
+    }
+    @keyframes working_rev1{
+        0%{
+            content: url("/icons/check-white-14px-in-25px.svg");
+        }
+        99%{
+            content: url("/icons/check-white-14px-in-25px.svg");
+        }
+        100%{
+            content: url("/icons/arrow-repeat-orange-20px-in-25px.svg");
+        }
+    }
+}
+@media only screen and (max-width: 750px){
+    .bulletin span{
+        font-size:16px;
+    }
+    .bulletin span:nth-child(1){
+        padding-bottom: 20px;
+    }
+    .task-icon{
+        width: 25px;
+        height: 25px;
+    }
+    .linebar::after, .linebar::before{
+        height: 3px;
+    }
+    .action-icon{
+        width: 20px;
+        height: 20px;
+    }
+    .action-icon::after{
+        content: url("/icons/x-blue-10px-in-20px.svg");
+    }
+    .bulletin:nth-child(1) .task-icon::after{
+        content: url("/icons/details-orange-25px.svg");
+
+    }
+    .bulletin:nth-child(2) .task-icon::after{
+        content: url("/icons/pencil-orange-25px.svg");
+    }
+    .bulletin:nth-child(3) .task-icon::after{
+        content: url("/icons/layers-orange-25px.svg");
+    }
+    .bulletin:nth-child(4) .task-icon::after{
+        content: url("/icons/image-orange-25px.svg");
+    }
+    .complete .action-icon::after{
+        content: url("/icons/check-white-12px-in-20px.svg");
+    }
+    .complete_rev .action-icon::after{
+        content: url("/icons/x-blue-10px-in-20px.svg");
+    }
+    @keyframes working1{
+        0%{
+            content: url("/icons/x-blue-10px-in-20px.svg");
+        }
+        99%{
+            content: url("/icons/x-blue-10px-in-20px.svg");
+        }
+        100%{
+            content: url("/icons/arrow-repeat-orange-16px-in-20px.svg");
+        }
+    }
+    @keyframes working_rev1{
+        0%{
+            content: url("/icons/check-white-12px-in-20px.svg");
+        }
+        99%{
+            content: url("/icons/check-white-12px-in-20px.svg");
+        }
+        100%{
+            content: url("/icons/arrow-repeat-orange-16px-in-20px.svg");
+        }
+    }
+}
+@media only screen and (max-width: 420px){
+    .bulletin span{
+        font-size:12px;
+    }
+    .bulletin span:nth-child(1){
+        padding-bottom: 10px;
+    }
+    .task-icon{
+        width: 20px;
+        height: 20px;
+    }
+    .linebar::after, .linebar::before{
+        height: 2.4px;
+    }
+    .action-icon{
+        width: 16px;
+        height: 16px;
+        border: solid 2px var(--blue);
+    }
+    .action-icon::after{
+        content: url("/icons/x-blue-6px-in-16px.svg");
+    }
+    .bulletin:nth-child(1) .task-icon::after{
+        content: url("/icons/details-orange-20px.svg");
+
+    }
+    .bulletin:nth-child(2) .task-icon::after{
+        content: url("/icons/pencil-orange-20px.svg");
+    }
+    .bulletin:nth-child(3) .task-icon::after{
+        content: url("/icons/layers-orange-20px.svg");
+    }
+    .bulletin:nth-child(4) .task-icon::after{
+        content: url("/icons/image-orange-20px.svg");
+    }
+    .complete .action-icon{
+        border: solid 2px var(--orange);
+    }
+    .complete .action-icon::after{
+        content: url("/icons/check-white-10px-in-16px.svg");
+    }
+    .working_rev .action-icon{
+        border:  solid 2px var(--orange);
+    }
+    .complete_rev .action-icon{
+        border: solid 2px var(--blue);
+    }
+    .complete_rev .action-icon::after{
+        content: url("/icons/x-blue-6px-in-16px.svg");
+    }
+    .first .action-icon, .last .action-icon{
+        border: solid 2px var(--orange);
+        }
+    @keyframes working1{
+        0%{
+            content: url("/icons/x-blue-6px-in-16px.svg");
+        }
+        99%{
+            content: url("/icons/x-blue-6px-in-16px.svg");
+        }
+        100%{
+            content: url("/icons/arrow-repeat-orange-12px-in-16px.svg");
+        }
+    }
+    @keyframes working_rev1{
+        0%{
+            content: url("/icons/check-white-10px-in-16px.svg");
+        }
+        99%{
+            content: url("/icons/check-white-10px-in-16px.svg");
+        }
+        100%{
+            content: url("/icons/arrow-repeat-orange-12px-in-16px.svg");
+        }
+    }
+    @keyframes working2{
+        0%{
+            border: solid 2px var(--blue);
+        }
+        99%{
+            border: solid 2px var(--blue);
+        }
+        100%{
+            border: solid 2px var(--orange);
+        }
+    }
+}

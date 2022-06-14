@@ -1,0 +1,54 @@
+:root{
+    --search-btn-width:45px;
+    --grey_black:#39424E;
+    --yellow:#FFDE59;
+    --yellow_dark:#FFD600;
+    --purple:#4E4296;
+    --green:#00AD6F;
+    --blue:#5271FF;
+    --orange:#FF5757;
+    --flyer-height:500px;
+    --flyer-B_width:600px;
+    --pink:#A7AFD2;
+    --carrot:#A95656;
+}
+*,*:focus,*:hover{
+    outline:none;
+}
+html,body{
+    color: var(--grey_black);
+    font-family: 'Courier New',Arial, Helvetica, sans-serif;
+}
+
+html h1{
+    margin: 0px;
+}
+/*+++++++++++++++++++>>>>>>>>>>>>  Flyer Portion */
+
+
+/*------------>>>>>>>> Buttons */
+
+/*++++++++++++++++++++>>>>>>>> Houses-Box*/
+
+/*--------------->>>>>>>> Hcard Container*/
+.Hcard-container{
+    display: flex;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    padding: 20px 10px;
+    flex-wrap: wrap;
+}
+@media only screen and (max-width: 750px){
+    :root{
+        --search-btn-width:35px;
+        --flyer-height:300px;
+        --flyer-B_width:95%;
+    }
+    
+    .Hcard-container{
+        padding: 0px;
+        flex-direction: column;
+    }
+    
+}

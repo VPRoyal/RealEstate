@@ -1,0 +1,3 @@
+Use try cacth in place of async await to responded with an error when getting data to mongodb in profile.service.
+Use authentication key and encrypt the password during login/signup process.
+We have to setup more access parameters and authentication keys for use of API.

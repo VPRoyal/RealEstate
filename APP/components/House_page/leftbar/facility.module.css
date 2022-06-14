@@ -1,0 +1,27 @@
+.facilities p span:nth-child(1) span{
+    text-align: center;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.2px;
+    color: var(--orange);
+}
+.facilities p:nth-child(odd) span:nth-child(1) span{
+    color: var(--blue);
+
+}
+
+#facility-icon{
+    flex-grow: 0;
+    flex-shrink:0 ;
+    display: block;
+    text-align: center;
+    width: 100px;
+    padding-right: 10px;
+    border-right: solid 3px var(--grey_black);
+}
+#facility-icon span{
+    display: block;
+}
+.facilities p span:nth-child(3){
+    word-wrap: break-word;
+}

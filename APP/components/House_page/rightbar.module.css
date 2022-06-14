@@ -1,0 +1,16 @@
+.rightbar{
+    position: relative;
+    width: auto;
+    color: white;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+@media only screen and (max-width: 1020px){
+    .rightbar{
+        position: static;
+        display: block;
+        max-width: 100%;
+        width: auto;
+    }
+}

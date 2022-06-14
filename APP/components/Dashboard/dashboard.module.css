@@ -1,0 +1,7 @@
+.dashboard{
+    z-index: 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}

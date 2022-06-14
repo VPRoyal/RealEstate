@@ -1,0 +1,247 @@
+
+/*-------------------->>>>>>>>>>>>>> POST HEADING */
+
+.post-head{
+    display: flex;
+    position: relative;
+    align-content: center;
+    padding: 5px 0px;
+    margin: 10px;
+}
+.post-head div{
+    position: relative;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+.post-head div h2{
+    margin: 0px;
+    padding: 0px;
+    color: var(--grey_black);
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.post-head div h3{
+    color: var(--orange);
+    letter-spacing: 1px;
+    font-weight: 900;
+    margin: 0px;
+    margin-top:20px;
+}
+.post-head div h3:nth-of-type(2){
+    color: var(--grey_black);
+    font-weight: 400;
+    margin-top: 10px;
+}
+.post-head div h3:nth-of-type(2) span:nth-child(2){
+    color: var(--blue);
+    font-weight: 600;
+}
+
+/*------------>>>>>>> Rating System */
+.seller-rating{
+    all: unset;
+    display: flex;
+    align-content: space-between;
+    position: relative;
+
+}
+.seller-rating div{
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+    font-size: 20px ;
+    font-weight: 600;
+    color: var(--blue);
+    position: relative;
+    
+    /* align-items: stretch; */
+}
+.seller-rating span{
+    margin-right: 5px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    line-height: 30px;
+}
+.seller-rating div:nth-child(2), .seller-rating div:nth-child(3){
+    margin-left: 20px;
+}
+.rating-txt{
+    color: var(--grey_black);
+    font-family: inherit;
+    margin-top: 5px;
+}
+.rating-txt span:nth-child(2){
+    color: var(--blue);
+    font-weight: 600;
+}
+.star{
+    font-weight: bolder;
+    /* background: -webkit-linear-gradient(left, var(--yellow) 33%, rgb(57, 66, 78, 0.9) 33%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    position: relative;
+    font-size: 30px;
+}
+
+#heartbtn, #heartbtnclk{
+position: absolute;
+right:20px;
+cursor: pointer;
+}
+#heartbtnclk::after{
+    content: url('/icons/heart-fill-FF5757\ Orange\ stroked\ 25px.svg');
+}
+#heartbtn::after{
+    content: url('/icons/heart-FFDE59\ Yellow\ stroked\ 25px.svg');
+}
+#heartbtn:hover::after{
+    content: url('/icons/heart-fill-FFDE59\ Yellow\ stroked\ 25px.svg');
+}
+.details{
+    max-width: 100%;
+    margin: 20px 0px;
+    position: relative;
+    display: flex;
+    background-color: var(--yellow);
+    flex-wrap: nowrap;
+    /* filter: brightness(200%); */
+    /* border: 2px solid blue; */
+}
+.leftbar{
+position: relative;
+margin: 0px 10px;
+flex-shrink: 0;
+width: 60%;
+overflow: hidden;
+}
+
+.leftbar>div{
+    padding: 30px 0px 80px 20px;
+    margin: 20px 0px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+
+}
+.leftbar h2{
+    font-size: 24px;
+    line-height: 24px;
+    padding: 0px 0px 0px 0px;
+    color: var(--grey_black);
+}
+.leftbar div p{
+    margin: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.leftbar div p span{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight:500;
+    color: #091E42;
+    letter-spacing: 0.7px;
+}
+.leftbar div p svg{
+    width: 30px;
+    height: 30px;
+    color: var(--orange);
+}
+.leftbar div p:nth-child(odd) svg{
+    color: var(--blue);
+}
+.leftbar div p span:first-of-type{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/*------------------->>>>>>>> Right Side Bar*/
+
+
+/*---------------->>>>>>>>>>>> Media Queries */
+
+
+@media only screen and (max-width: 1020px){
+    .details{
+        display: block;
+    }
+    
+.leftbar{
+    max-width: 100%;
+    width: auto;
+    display: block;
+}
+#heartbtn, #heartbtnclk{
+    right: 0px;
+}
+}
+@media only screen and (max-width: 750px){
+    .post-head{
+        display: grid;
+    }
+    .post-head div{
+        grid-row: 1/span 1;
+    }
+    #ratings{
+        grid-row: 2/span 1;
+        display: block;
+        margin-top: 40px;
+    }
+    
+}
+@media only screen and (max-width: 550px){
+    .leftbar > div{
+        padding-bottom: 50px;
+    }
+    
+}
+@media only screen and (max-width: 480px){
+    .leftbar > div{
+        padding-bottom: 30px;
+    }
+.post-head div h1{
+    font-size: 22px;
+}
+.post-head div h3{
+    font-size: 16px;
+    margin-top: 10px;
+}
+.seller-rating div{
+    font-size: 18px !important;
+}
+.ratings span, .ratings p{
+    font-size: 18px !important;
+}
+.ratings .seller-rating div:nth-child(1){
+    flex-basis: 100%;
+}
+ 
+.ratings .seller-rating div{
+    margin: 0px;
+}
+.rating-bar div{
+    flex-basis: unset !important;
+    margin-top: 10px !important;
+}
+.rating-txt span{
+    font-size: 14px;
+}
+.details h2{
+    font-size: 22px;
+}
+.details p, .details span{
+    font-size: 14px;
+}
+
+}
+@media only screen and (max-width: 350px){
+.seller-rating{
+    flex-wrap: wrap;
+}
+.seller-rating div:nth-child(3){
+    margin: 0px;
+    margin-right: 20px;
+}
+}

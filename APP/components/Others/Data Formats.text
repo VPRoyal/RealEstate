@@ -1,0 +1,49 @@
+// ------------>>>>>>>>>>> For Line Chart 
+
+<LineChart data={data} label={Xlabel} color={color} axis={axis} />
+
+
+const Xlabel = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV"]
+const axis={x:"Months",y:"Total Views"}
+const data = [
+    {
+        title: "2019",
+        val: [60, 49,67, 67, 200, 200, 49, 49, 49, 40, 249],
+        max: 249, min: 49
+    },
+    {
+        title: "2020",
+        val: [60, 123, 46, 89, 58, 120, 45, 90, 29, 40, 43],
+        max: 123, min: 23
+    },
+    {
+        title: "2021",
+        val: [60, 90, 19, 56, 89, 120, 125, 112, 48, 40, 56],
+        max: 125, min: 19
+    }
+]
+
+
+
+// -------------->>>>>>>>>>> For Pie Chart
+
+<PieChart label={label} data={data} color={color} config={config} />
+
+
+const label=["Sell","Rent", "PG","4th", "5th"]
+const data=[
+    {
+        title:"2020",
+        val:[20,30,50,40,35]
+    }
+]
+const config={
+        dough:true,
+        label:false
+}
+
+
+//-------------->>>>>>>>>>> Circular Bar
+
+<Cirbar box_size="300" percent="90" radius="80" color={{ bar: "var(--blue)", text: "var(--blue)", numb: "#e5e5e5" }} />
+

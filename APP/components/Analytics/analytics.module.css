@@ -1,0 +1,74 @@
+.wrapper{
+    width: 100%;
+    position: relative;
+    padding:0px 10px;
+}
+.wrapper h3{
+    color: var(--grey_black);
+}
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 40px;
+    margin: 40px 0px;
+}
+.rect{
+    display: flex;
+    position: relative;
+    padding: 0px 10px;
+    width:40%;
+    /* margin: 10px 20px 0px 0px; */
+    justify-content: space-between;
+    min-width: fit-content;
+    align-items: center;
+    border: solid 3px var(--blue);
+    border-radius:5px ;
+}
+.rect h1{
+    margin: 0px 10px;
+    font-size: 28px;
+    /* color: var(--blue); */
+}
+.rect h1 span{
+    display: block;
+}
+.rect h1 span:nth-child(2){
+    font-size: 18px;
+    padding-left: 5px;
+    color: var(--blue);
+}
+.rect canvas{
+    position: relative;
+    width: 20%;
+    min-width: 150px;
+}
+
+.draw{
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 150px;
+    border: solid 2px var(--yellow);
+}
+
+.chart{
+    display: block;
+    width: 100%;
+}
+.CHead{
+    margin-bottom: 40px;
+}
+.CHead .select{
+    display: inline-block;
+    width: fit-content;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.list{
+    margin: 20px 20px 20px 0px;
+}
+.list h3{
+    margin: 20px 0px;
+}

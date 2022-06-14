@@ -1,0 +1,36 @@
+.rightbar{
+    flex-shrink: 1;
+    flex-grow: 1;
+    position: relative;
+    width: auto;
+    min-width: auto;
+    padding: 10px;
+    padding-top: 0px;
+    padding-right: 0px;
+}
+.central-box{
+    display: block;
+    position: relative;
+    height: 100%;
+    background-color: white;
+}
+.heading{
+    display: block;
+    position: relative;
+    padding: 20px;
+    padding-right: 0px;
+}
+.heading h1{
+    font-size: 26px;
+    font-family: cursive !important;
+}
+.heading h2{
+    font-size: 22px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: var(--blue);
+    font-family: 'Courier New', Courier, monospace;
+
+}
+@media only screen and (max-width: 550px){
+}

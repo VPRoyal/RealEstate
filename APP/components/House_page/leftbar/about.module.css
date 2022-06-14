@@ -1,0 +1,201 @@
+.seller-rating{
+    all: unset;
+    display: flex;
+    align-content: space-between;
+    position: relative;
+
+}
+.seller-rating div{
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+    font-size: 20px ;
+    font-weight: 600;
+    color: var(--blue);
+    position: relative;
+    
+    /* align-items: stretch; */
+}
+.seller-rating span{
+    margin-right: 5px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    line-height: 30px;
+}
+.seller-rating div:nth-child(2), .seller-rating div:nth-child(3){
+    margin-left: 20px;
+}
+.about>div{
+    margin-left: 10px;
+}
+.about p{
+    align-items: stretch !important;
+
+}
+.about p span{
+    font-weight: bold;
+}
+.about>p span:nth-child(2){
+    color: var(--blue);
+    font-weight: bold;
+}
+.rating-bar{
+    display: block;
+    margin: 0px 0px 0px 0px!important;
+    position: relative;
+}
+.rating-bar div{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.rating-bar input{
+    display: none;
+}
+.rating-bar label{
+cursor: pointer;
+width: 30px;
+background: white;
+display: block;
+}
+.rating-bar label::before{
+    content:"★";
+    position: relative;
+    font-size: 30px;
+    line-height: 30px;
+    display: block;
+    color: rgba(57, 66, 78, 0.9);
+}
+.rating-bar label::after{
+    content:"★";
+    font-size: 30px;
+    line-height: 30px;
+    display: block;
+    color: var(--blue);
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    transition: 0.1s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.rating-bar label:hover::after,.rating-bar label:hover ~ label::after,.rating-bar input:checked ~ label::after{
+opacity: 1;
+}
+.star label{
+    cursor: default;
+}
+.star input:checked ~ label::before{
+    color: var(--orange);
+}
+.star input:checked ~ label::after, .star label:hover::after,.star label:hover ~ label::after,.star label::after{
+    opacity:0;
+}
+.rating-comnt{
+    all: unset ;
+    min-width: 230px;
+    max-width: 430px !important;
+    margin:20px 0px 0px 0px !important;
+    background-color: var(--grey_black);
+    padding:5px 10px;
+    border-radius: 5px;
+    width: 90%;
+    position: relative;
+    /* display: none !important; */
+
+}
+.rating-comnt div{
+    display: block;
+    margin: 0px !important;
+    width: 100%;
+}
+.rating-comnt textarea{
+    padding: 5px 10px;
+    resize: none;
+    color: var(--grey_black);
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    background-color: white;
+    max-width: 100%;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+}
+.rating-comnt textarea::placeholder{
+    opacity: 0.6;
+    color: black;
+}
+.rating-comnt textarea:focus{
+    outline: var(--blue) solid 2px;
+}
+.rating-comnt button{
+    display: block;
+    width: 100%;
+    padding: 5px 0px;
+    margin: 10px 0px;
+    cursor: pointer;
+    color: white;
+    background-color: var(--yellow);
+    border: none;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;
+font-size: 18px;
+}
+.rating-comnt button:hover{
+    background-color: var(--yellow);
+    color: white;
+}
+.rating-comnt button:active{
+    background-color: var(--orange);
+}
+.rating-comnt p{
+    margin: 10px 0px 10px 0px !important;
+    font-family: cursive;
+    color: white;
+    width: fit-content;
+}
+.about>div{
+    margin-left: 10px;
+}
+.about p{
+    align-items: stretch !important;
+
+}
+.about p span{
+    font-weight: bold;
+}
+.about>p span:nth-child(2){
+    color: var(--blue);
+    font-weight: bold;
+}
+@media only screen and (max-width: 480px){
+    .seller-rating div{
+        font-size: 18px !important;
+    }
+    .ratings span, .ratings p{
+        font-size: 18px !important;
+    }
+    .ratings .seller-rating div:nth-child(1){
+        flex-basis: 100%;
+    }
+     
+    .ratings .seller-rating div{
+        margin: 0px;
+    }
+    .rating-bar div{
+        flex-basis: unset !important;
+        margin-top: 10px !important;
+    }
+
+}
+@media only screen and (max-width: 350px){
+    .seller-rating{
+        flex-wrap: wrap;
+    }
+    .seller-rating div:nth-child(3){
+        margin: 0px;
+        margin-right: 20px;
+    }
+    }

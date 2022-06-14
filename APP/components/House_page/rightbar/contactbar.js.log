@@ -1,0 +1,132 @@
+import React, { Component } from 'react'
+import styles from "./contactbar1.module.css"
+var screen
+export default class contactbar extends Component {
+    constructor() {
+        super();
+        this.state = {
+            contactbar: false,
+            screen: false,
+            popanimate: null,
+            boxanimate: null,
+            contactanim: null,
+            up: false,
+            input: {
+                name: false,
+                num: false,
+                email: false,
+                time: false
+            }
+        }
+        this.contactbar = this.contactbar.bind(this)
+    }
+
+    // We have to Create an Error check method for the box
+    animate() {
+        if (!this.state.up) {
+            this.setState({
+                up: true,
+                popanimate: styles["popanimate"],
+                boxanimate: styles["boxanimate"],
+                contactanim: {
+                    background: "rgba(82, 113, 255,1)",
+                    backgroundSize: "unset",
+                    animation: "none",
+                    cursor: "default"
+                },
+                contactbar: false
+            })
+        }
+        else if (this.state.up) {
+            this.setState({
+                up: false,
+                popanimate: null,
+                boxanimate: styles["boxanimaterev"],
+                contactbar: true
+            }, () => {
+                setTimeout(() => {
+                    this.setState({ contactanim: null })
+                }, 700);
+            })
+        }
+    }
+    contactbar() {
+        screen = window.innerWidth
+        if (screen <= 1020 && !this.state.screen) {
+            this.setState({ contactbar: true, screen: true })
+        }
+        else if (screen > 1020 && this.state.screen) {
+            this.setState({ contactbar: false, screen: false })
+        }
+
+    }
+    focus(e) {
+        var val = e.target.value, obj = e.target
+        var name = obj.name
+        if (val && obj.tagName === "INPUT") {
+            if (!this.state.input[name]) {
+                var state = this.state.input
+                state[name] = true
+                this.setState({ input: state })
+            }
+        }
+        else if (!val && obj.tagName === "INPUT") {
+            if (this.state.input[name]) {
+                var state = this.state.input
+                state[name] = false
+                this.setState({ input: state })
+            }
+        }
+    }
+    componentDidMount() {
+        addEventListener("resize", this.contactbar)
+        this.contactbar()
+    }
+    componentWillUnmount() {
+        removeEventListener("resize", this.contactbar)
+    }
+    render() {
+        return (
+            <div className={styles.contact} onClick={() => { this.state.contactbar ? this.animate() : null }} style={this.state.contactanim} >
+                <div className={styles.head} >
+                    <h1>Book a free site visit </h1>
+                    <i className={`${styles["popbut"]} ${this.state.popanimate}`} onClick={() => { this.state.screen ? this.animate() : null }} ></i>
+                </div>
+                <div className={`${this.state.boxanimate} ${styles.body}`}>
+                    <div className={styles.rows} onChange={(e) => { this.focus(e) }} >
+                        <div>
+                            <input type="text" name="name" id="" placeholder="" />
+                            <span className={`${styles["placeholder"]} ${this.state.input.name ? styles["placeholder-foc"] : null}`} >Name</span>
+                        </div>
+                        <div>
+                            {/* <span style={{ display: "none" }} className={styles["error-pointer"]}>Name is Incorrect !!!</span> */}
+                            <input type="text" name="num" id="" />
+                            <span className={`${styles["placeholder"]} ${this.state.input.num ? styles["placeholder-foc"] : null}`} >Number</span>
+                        </div>
+                        <div>
+                            <input type="email" name="email" id="" />
+                            <span className={`${styles["placeholder"]} ${this.state.input.email ? styles["placeholder-foc"] : null}`} >Email</span>
+                        </div>
+                        <div>
+                            <input type="email" name="time" id="" />
+                            <span className={`${styles["placeholder"]} ${this.state.input.time ? styles["placeholder-foc"] : null}`} >Free time to contact</span>
+                        </div>
+                    </div>
+                    <div className={styles.checks} >
+                        <div>
+                            <input type="checkbox" name="" id={styles["check1"]} />
+                            <label htmlFor="check1"><span></span><span>By clicking we are ready to look forward by doing it like that Im very happy</span></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id={styles["check2"]} />
+                            <label htmlFor="check2"><span></span><span>By clicking we are ready to look forward</span></label>
+                        </div>
+                    </div>
+                    <div className={styles["button"]} >
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
