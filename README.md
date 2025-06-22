@@ -1,6 +1,6 @@
-# Real Estate Website Project
+# Real Estate Web Application (Open Source)
 
-The Real Estate Website Project is an ongoing web application designed to facilitate property listings, searches, and management. Built from scratch, this project leverages modern technologies to deliver a seamless user experience.
+A full-featured real estate platform engineered from the ground up to streamline property listings, intelligent search, and comprehensive management. This open-source solution harnesses modern web technologies to deliver an intuitive, high-performance user experience tailored for scalability and user engagement.
 
 ## Table of Contents
 
